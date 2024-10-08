@@ -1,0 +1,77 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{% static 'main/css/main1.css' %}">
+
+    {% block title %}
+
+    <title>Графики и диаграммы</title>
+
+    {% endblock %}
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <aside class="col-md-2 bg-light p-3">
+
+                <img src="{% static 'main/img/grafico.png' %}" alt="график" class="img-fluid" style="width: 50%;">
+
+                <span class="d-block">Графики и диаграммы</span>
+
+                <ul class="list-unstyled">
+
+                    {% include 'main/nav.html' %}
+
+                </ul>
+
+            </aside>
+
+            <main class="col-md-10 p-4">
+
+                {% block content %}
+
+
+
+                {% endblock %}
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <footer class="text-center mt-4 py-4 bg-dark text-white">
+
+        {% include 'main/footer.html' %}
+
+        <p>&copy; 2024 Графики и диаграммы. </p>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
