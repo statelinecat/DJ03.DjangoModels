@@ -10,7 +10,12 @@
     <br>
     <br>
     <p>
-        Далее подробное описание {{caption}} с примерами использования, анализа и иллюстрациями
+       {% for new in news %}
+	    <div>
+		    <h3> {{ new.title }} </h3>
+		    <p> {{ new.short_description }} </p>
+	    </div>
+        {% endfor %}
 
     </p>
 

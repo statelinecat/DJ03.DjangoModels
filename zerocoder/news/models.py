@@ -6,3 +6,10 @@ class News_post(models.Model):
     short_description = models.CharField('Краткое описание', max_length=200)
     text = models.TextField('Текст новости')
     pub_date = models.DateTimeField('Дата публикации')
+
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+
+    def __str__(self):
+        return self.title
